@@ -1,6 +1,10 @@
 # Assignment No 1 :
 
 ## String operation without using buildin function :
+### Operations Performed : 
+### 1) Length 
+### 2) Reverse 
+### 3) Concate 
 
 **Code** :
       
