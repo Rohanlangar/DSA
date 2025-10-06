@@ -31,7 +31,6 @@ int main() {
         cout << endl;
     }
 
-    // input B_rrl with random numbers
     cout << "\nMatrix B_rrl (random values):\n";
     for (int i_rrl = 0; i_rrl < n_rrl; i_rrl++) {
         for (int j_rrl = 0; j_rrl < n_rrl; j_rrl++) {
