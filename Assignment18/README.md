@@ -17,23 +17,6 @@
 5. **Insert After** - Insert after a specific value
 6. **Delete Value** - Delete a specific value
 
-**Advantages:**
-- **Bidirectional Traversal** - Can move forward and backward
-- **Efficient Deletion** - Can delete a node in O(1) if pointer is known
-- **Better for certain algorithms** - Like doubly ended queues
-- **Easier Insertion** - Can insert before a given node easily
-
-**Disadvantages:**
-- **Extra Memory** - Requires additional pointer per node
-- **Complex Implementation** - More pointers to manage
-- **Higher Overhead** - More memory per node
-
-**Applications:**
-- Browser history (back/forward buttons)
-- Music players (previous/next song)
-- Undo/Redo operations
-- LRU cache implementation
-
 **Time Complexity:**
 - Insertion: O(1) at known position, O(n) for search
 - Deletion: O(1) at known position, O(n) for search
@@ -46,30 +29,30 @@
 using namespace std;
 
 struct dll {
-    int val ;
-    dll *next ;
+    int val;
+    dll *next;
     dll *pre;
 };
 
-dll * createnode(){
+// Function to create a new node
+dll* createnode_rrl() {
     dll *newnode = new dll();
     newnode->next = NULL;
     newnode->pre = NULL;
     return newnode;
 }
 
-dll * createNewList(){
-    dll * head = createnode();   
-    dll*temp = head;
+// Function to create initial linked list
+dll* createNewList_rrl() {
+    dll *head = createnode_rrl();   
+    dll *temp = head;
     int ch;
-    while (1){
-        cout << "Enter 1 to continue and 0 to exit : ";
+    while (1) {
+        cout << "Enter 1 to continue and 0 to stop creating list: ";
         cin >> ch;
-
-        if (ch == 0){
+        if (ch == 0)
             break;
-        }
-        dll *newnode = createnode();
+        dll *newnode = createnode_rrl();
         cout << "Enter value for linked list: ";
         cin >> newnode->val;
         newnode->pre = temp;
@@ -79,19 +62,26 @@ dll * createNewList(){
     return head;
 }
 
-void print(dll *head){
-    dll *temp = head->next; 
-    while (temp != NULL){
-        cout << temp->val << "<->";
+// Display the doubly linked list
+void print_rrl(dll *head) {
+    dll *temp = head->next;
+    if (temp == NULL) {
+        cout << "List is empty!\n";
+        return;
+    }
+    cout << "NULL <-> ";
+    while (temp != NULL) {
+        cout << temp->val << " <-> ";
         temp = temp->next;
     }
-    cout << "NULL" << endl;
+    cout << "NULL\n";
 }
-```vo
-id push_front(dll *&head){
+
+// Insert at front
+void push_front_rrl(dll *&head) {
     dll *temp = head;
-    dll *newnode = createnode();
-    cout <<"Enter value for new node (front): ";
+    dll *newnode = createnode_rrl();
+    cout << "Enter value to insert at front: ";
     cin >> newnode->val;
 
     newnode->next = temp->next;
@@ -100,108 +90,180 @@ id push_front(dll *&head){
     temp->next = newnode;
 }
 
-void push_back(dll *&head){
+// Insert at end
+void push_back_rrl(dll *&head) {
     dll *temp = head;
-
-    while (temp->next != NULL){
+    while (temp->next != NULL)
         temp = temp->next;
-    }
 
-    dll * newnode= createnode();
-    cout << "Enter value for last node: ";
+    dll *newnode = createnode_rrl();
+    cout << "Enter value to insert at end: ";
     cin >> newnode->val;
 
     temp->next = newnode;
-    newnode->pre= temp;
+    newnode->pre = temp;
 }
 
-void pop_front(dll *&head){
-    if (head->next == NULL){
-        cout << "List is empty!" << endl;
+// Delete from front
+void pop_front_rrl(dll *&head) {
+    if (head->next == NULL) {
+        cout << "List is empty!\n";
         return;
     }
     dll *todelete = head->next;
     head->next = todelete->next;
-    if (todelete->next != NULL){
+    if (todelete->next != NULL)
         todelete->next->pre = head;
-    }
+
     cout << "Deleted (front): " << todelete->val << endl;
     delete todelete;
 }
 
-void pop_back(dll *&head){
-    if (head->next == NULL){
-        cout << "List is empty!" << endl;
+// Delete from end
+void pop_back_rrl(dll *&head) {
+    if (head->next == NULL) {
+        cout << "List is empty!\n";
         return;
     }
     dll *temp = head->next;
-    while (temp->next != NULL){
+    while (temp->next != NULL)
         temp = temp->next;
-    }
+
     cout << "Deleted (back): " << temp->val << endl;
     temp->pre->next = NULL;
     delete temp;
 }
 
-void insert_after(dll *&head, int key){
+// Insert after a specific value
+void insert_after_rrl(dll *&head, int key) {
     dll *temp = head->next;
-    while (temp != NULL && temp->val != key){
+    while (temp != NULL && temp->val != key)
         temp = temp->next;
-    }
-    if (temp == NULL){
-        cout << "Value " << key << " not found!" << endl;
+
+    if (temp == NULL) {
+        cout << "Value " << key << " not found!\n";
         return;
     }
-    dll *newnode = createnode();
+
+    dll *newnode = createnode_rrl();
     cout << "Enter value to insert after " << key << ": ";
     cin >> newnode->val;
 
     newnode->next = temp->next;
     newnode->pre = temp;
-    if (temp->next != NULL) temp->next->pre = newnode;
+    if (temp->next != NULL)
+        temp->next->pre = newnode;
     temp->next = newnode;
 }
 
-void delete_value(dll *&head, int key){
+// Delete a specific value
+void delete_value_rrl(dll *&head, int key) {
     dll *temp = head->next;
-    while (temp != NULL && temp->val != key){
+    while (temp != NULL && temp->val != key)
         temp = temp->next;
-    }
-    if (temp == NULL){
-        cout << "Value " << key << " not found!" << endl;
+
+    if (temp == NULL) {
+        cout << "Value " << key << " not found!\n";
         return;
     }
+
     temp->pre->next = temp->next;
-    if (temp->next != NULL){
+    if (temp->next != NULL)
         temp->next->pre = temp->pre;
-    }
+
     cout << "Deleted value: " << temp->val << endl;
     delete temp;
 }
 
-int main(){
-    dll*head = createNewList();
-    cout << "Initial List: ";
-    print(head);
+int main() {
+    dll *head = NULL;
+    int ch;
 
-    push_front(head);
-    print(head);
+    do {
+        cout << "\n***** Doubly Linked List Menu *****\n";
+        cout << "1. Create New List\n";
+        cout << "2. Display List\n";
+        cout << "3. Insert at Front\n";
+        cout << "4. Insert at End\n";
+        cout << "5. Delete from Front\n";
+        cout << "6. Delete from End\n";
+        cout << "7. Insert After a Value\n";
+        cout << "8. Delete a Specific Value\n";
+        cout << "0. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> ch;
 
-    push_back(head);
-    print(head);
+        switch (ch) {
+            case 1:
+                head = createNewList_rrl();
+                cout << "List created successfully!\n";
+                break;
 
-    pop_front(head);
-    print(head);
+            case 2:
+                print_rrl(head);
+                break;
 
-    pop_back(head);
-    print(head);
+            case 3:
+                if (!head) cout << "Please create a list first!\n";
+                else push_front_rrl(head);
+                break;
 
-    insert_after(head, 2);   
-    print(head);
+            case 4:
+                if (!head) cout << "Please create a list first!\n";
+                else push_back_rrl(head);
+                break;
 
-    delete_value(head, 3);   
-    print(head);
+            case 5:
+                if (!head) cout << "Please create a list first!\n";
+                else pop_front_rrl(head);
+                break;
+
+            case 6:
+                if (!head) cout << "Please create a list first!\n";
+                else pop_back_rrl(head);
+                break;
+
+            case 7:
+                if (!head) cout << "Please create a list first!\n";
+                else {
+                    int key;
+                    cout << "Enter value after which to insert: ";
+                    cin >> key;
+                    insert_after_rrl(head, key);
+                }
+                break;
+
+            case 8:
+                if (!head) cout << "Please create a list first!\n";
+                else {
+                    int key;
+                    cout << "Enter value to delete: ";
+                    cin >> key;
+                    delete_value_rrl(head, key);
+                }
+                break;
+
+            case 0:
+                cout << "Exiting program...\n";
+                break;
+
+            default:
+                cout << "Invalid choice! Try again.\n";
+        }
+
+    } while (ch != 0);
 
     return 0;
 }
+
 ```
+
+### Output :
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+https://drive.google.com/drive/folders/1CsaDtsJybHIoyYtNOFXcKrxv8k_87nk1?usp=sharing

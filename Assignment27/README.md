@@ -4,37 +4,11 @@
 #### Theory :
 **Queue with Linked List Implementation** provides a dynamic queue structure that can grow and shrink as needed, perfect for managing passenger queues at ticket counters where the number of passengers varies.
 
-**Queue Characteristics:**
-- **FIFO (First-In-First-Out)** - First passenger to arrive is served first
-- **Dynamic Size** - No fixed limit on queue length
-- **Fair Service** - Maintains order of arrival
-- **Real-time Management** - Add/remove passengers as needed
-
-**Linked List Advantages:**
-- **No Size Limit** - Can accommodate any number of passengers
-- **Memory Efficient** - Allocates memory only when needed
-- **No Overflow** - Unlike array-based queues
-- **Easy Implementation** - Simple pointer operations
-
-**Queue Operations:**
-1. **Enqueue** - Add passenger to rear of queue
-2. **Dequeue** - Remove passenger from front of queue
-3. **Front** - View next passenger to be served
-4. **Display** - Show all passengers in queue
-5. **Count** - Track number of waiting passengers
-
 **Ticket Counter Scenario:**
 - Passengers arrive and join the queue
 - Ticket agent serves passengers in order
 - Queue length varies throughout the day
 - Fair and organized service system
-
-**Real-world Applications:**
-- Airport check-in counters
-- Bank service queues
-- Government office queues
-- Restaurant waiting lists
-- Theme park ride queues
 
 **Passenger Management Features:**
 - Add passengers as they arrive
@@ -48,7 +22,6 @@
 - Display: O(n)
 - Count: O(1)
 
-**Space Complexity:** O(n) where n is the number of passengers
 
 #### Program :
 ```cpp
@@ -179,3 +152,9 @@ int main() {
     return 0;
 }
 ```
+
+
+![alt text](image-3.png)
+![alt text](image-4.png)
+
+https://drive.google.com/drive/folders/1yrR_vJs7A9z_Ol6J6tXulbtSbkJPwXX_?usp=drive_link

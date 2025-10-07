@@ -21,22 +21,11 @@
 - **No Overflow** - Can grow until system memory is full
 - **Easy Implementation** - Simple pointer manipulation
 
-**Applications:**
-- Stock price monitoring systems
-- Undo operations in applications
-- Browser history management
-- Function call management in programming
-
-**Real-world Use Case:**
-Stock traders need quick access to the most recent prices to make trading decisions. A stack-based system ensures the latest price is always immediately available.
-
 **Time Complexity:**
 - Push: O(1)
 - Pop: O(1)
 - Top: O(1)
 - Display: O(n)
-
-**Space Complexity:** O(n) where n is the number of prices stored
 
 #### Program :
 ```cpp
@@ -151,3 +140,9 @@ int main() {
     return 0;
 }
 ```
+
+### Output :
+![alt text](image.png)
+![alt text](image-1.png)
+
+https://drive.google.com/drive/folders/1YLuxj4QGq64JCgMgBfrg5dnmr98qFcRe?usp=drive_link

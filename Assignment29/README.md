@@ -4,18 +4,6 @@
 #### Theory :
 **Call Center Queue System** uses queue data structure to manage incoming customer calls in a fair, first-come-first-served manner. This ensures efficient call handling and customer satisfaction.
 
-**Queue in Call Centers:**
-- **FIFO Processing** - First caller gets served first
-- **Fair Service** - No caller is skipped
-- **Dynamic Capacity** - Can handle varying call volumes
-- **Real-time Management** - Add/remove calls as they come
-
-**System Components:**
-- **Customer Queue** - Waiting calls in order of arrival
-- **Agent Assignment** - Dequeue calls to available agents
-- **Call Tracking** - Monitor queue status and wait times
-- **Dynamic Sizing** - Handle peak and off-peak hours
-
 **Linked List Implementation Benefits:**
 - **Unlimited Capacity** - No fixed limit on waiting calls
 - **Memory Efficient** - Allocates memory only when needed
@@ -28,32 +16,12 @@
 3. **Display Queue** - Show all waiting calls
 4. **Count Calls** - Track number of waiting customers
 
-**Real-world Applications:**
-- Customer service centers
-- Technical support hotlines
-- Emergency service dispatching
-- Reservation systems
-- Help desk operations
-
-**Queue Management Benefits:**
-- **Organized Service** - Systematic call handling
-- **Reduced Wait Confusion** - Clear order of service
-- **Agent Efficiency** - Agents get next call automatically
-- **Customer Satisfaction** - Fair treatment for all callers
-
-**Performance Metrics:**
-- Average wait time
-- Queue length
-- Call abandonment rate
-- Agent utilization
-
 **Time Complexity:**
 - Add Call: O(1)
 - Assist Customer: O(1)
 - Display Queue: O(n)
 - Count Calls: O(1)
 
-**Space Complexity:** O(n) where n is the number of waiting calls
 
 #### Program :
 ```cpp
@@ -171,3 +139,7 @@ int main() {
     return 0;
 }
 ```
+
+![alt text](image.png)
+![alt text](image-1.png)
+https://drive.google.com/drive/folders/1ClLPZaEIVINIelWVZ28Y37NVIGiHotvg?usp=drive_link

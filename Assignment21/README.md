@@ -17,30 +17,7 @@
    - Push current operator onto stack
 4. After scanning: Pop all remaining operators
 
-**Operator Precedence:**
-- Multiplication (*) and Division (/): Priority 2
-- Addition (+) and Subtraction (-): Priority 1
-- Higher precedence operators are evaluated first
-
-**Why Postfix?**
-- **No Parentheses Needed** - Natural evaluation order
-- **Easy Evaluation** - Simple stack-based evaluation
-- **Compiler Friendly** - Used in expression evaluation
-- **Unambiguous** - No precedence confusion
-
-**Stack Usage:**
-- Temporarily holds operators during conversion
-- Ensures correct precedence and associativity
-- LIFO nature helps maintain operator order
-
-**Applications:**
-- Compiler design (expression parsing)
-- Calculator implementations
-- Mathematical expression evaluators
-- Programming language interpreters
-
 **Time Complexity:** O(n) where n is the length of expression
-**Space Complexity:** O(n) for the stack
 
 #### Program :
 ```cpp
@@ -100,3 +77,7 @@ int main() {
     return 0;
 }
 ```
+
+### Output :
+![alt text](image.png)
+https://drive.google.com/file/d/1DPN7dE6IXsOaNBeiUDx6LBM5GikQPgnq/view?usp=drive_link

@@ -15,34 +15,10 @@
 - Maintains fairness in patient scheduling
 - Natural order for appointment systems
 
-**Linked List Implementation Advantages:**
-- **Dynamic Size** - No fixed limit on patients
-- **Memory Efficient** - Allocates memory as needed
-- **No Overflow** - Can grow until system memory is full
-- **Easy Implementation** - Simple pointer manipulation
-
-**Hospital Management Features:**
-- Patient name registration
-- Doctor assignment
-- Queue-based scheduling
-- Fair service order
-
-**Real-world Applications:**
-- Hospital appointment systems
-- Emergency room patient management
-- Clinic scheduling
-- Medical procedure queuing
-
-**Queue vs Stack:**
-- **Queue (FIFO)**: Fair scheduling, first-come-first-served
-- **Stack (LIFO)**: Last patient would be served first (unfair)
-
 **Time Complexity:**
 - Enqueue: O(1)
 - Dequeue: O(1)
 - Display: O(n)
-
-**Space Complexity:** O(n) where n is the number of patients
 
 #### Program :
 ```cpp
@@ -155,3 +131,6 @@ int main() {
     return 0;
 }
 ```
+
+![alt text](image.png)
+https://drive.google.com/file/d/1grRRLHErAY3kePpSu4mQTV6I0SoIm6CE/view?usp=drive_link

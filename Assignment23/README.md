@@ -23,23 +23,7 @@
    - If no match, expression is unbalanced
 4. After scanning: Stack should be empty for balanced expression
 
-**Stack Usage:**
-- Stores opening brackets temporarily
-- LIFO nature ensures correct matching order
-- Empty stack at end confirms all brackets are matched
-
-**Examples:**
-- **Balanced**: "()", "[]", "{}", "({[]})", "[({})]"
-- **Unbalanced**: "(]", "([)]", "((", "))", "{[}"
-
-**Applications:**
-- Compiler syntax checking
-- Mathematical expression validation
-- Code editor bracket matching
-- HTML/XML tag validation
-
 **Time Complexity:** O(n) where n is the length of expression
-**Space Complexity:** O(n) in worst case (all opening brackets)
 
 #### Program :
 ```cpp
@@ -98,3 +82,8 @@ int main() {
     return 0;
 }
 ```
+
+### Output 
+![alt text](image.png)
+
+https://drive.google.com/file/d/1PTdXuxXEktVMe_tZ5SeeD3XWycfIWib8/view?usp=drive_link

@@ -10,17 +10,6 @@
 3. Continue until no more swaps are needed
 4. After each pass, the largest element "bubbles up" to its correct position
 
-**Key Features:**
-- **In-place sorting** - No extra space needed for data
-- **Stable sorting** - Maintains relative order of equal elements
-- **Adaptive** - Performs better on partially sorted data
-- **Simple implementation** - Easy to understand and code
-
-**Doubly Linked List Advantages:**
-- Bidirectional traversal capability
-- Easy insertion and deletion at any position
-- Previous pointer helps in certain operations
-
 **Algorithm Steps:**
 1. Start from the head of the list
 2. Compare current node with next node
@@ -40,14 +29,12 @@
 #include <iostream>
 using namespace std;
 
-// Node structure for Doubly Linked List
 typedef struct Node {
     int data;
     Node* prev;
     Node* next;
 } Node;
 
-// Function to create a new node
 Node* createNode_rrl(int val) {
     Node* node = new Node;
     node->data = val;
@@ -56,7 +43,6 @@ Node* createNode_rrl(int val) {
     return node;
 }
 
-// Function to create the list
 Node* createList_rrl() {
     Node* head = nullptr;
     Node* tail = nullptr;
@@ -103,7 +89,6 @@ void bubbleSort_rrl(Node* head) {
     } while (swapped);
 }
 
-// Function to display the list
 void display_rrl(Node* head) {
     Node* temp = head;
     cout << "Head -> ";
@@ -130,3 +115,8 @@ int main() {
     return 0;
 }
 ```
+
+### Output :
+![alt text](image.png)
+
+https://drive.google.com/file/d/1be8fdFIlC34jVv4d2rjjYMnIWAX1T1wF/view?usp=drive_link

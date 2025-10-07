@@ -32,20 +32,7 @@ Expression: "5 3 + 2 *"
 4. Pop 2, Pop 8, Calculate 8*2=16, Push 16
 5. Result: 16
 
-**Advantages:**
-- **No Parentheses**: Eliminates precedence confusion
-- **Easy Evaluation**: Simple stack-based algorithm
-- **Efficient**: Single left-to-right scan
-- **Unambiguous**: No operator precedence issues
-
-**Applications:**
-- Calculator implementations
-- Compiler expression evaluation
-- Stack-based virtual machines
-- Mathematical software
-
 **Time Complexity:** O(n) where n is the length of expression
-**Space Complexity:** O(n) for the stack
 
 #### Program :
 ```cpp
@@ -104,3 +91,7 @@ int main() {
     return 0;
 }
 ```
+
+![alt text](image.png)
+
+https://drive.google.com/file/d/18tYwoY5WQ9hMJuMKnV0-xU5R7uLlMOqc/view?usp=drive_link

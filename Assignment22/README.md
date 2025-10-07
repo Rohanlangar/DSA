@@ -4,52 +4,11 @@
 #### Theory :
 **Stack using Array** is a linear data structure that follows the Last-In-First-Out (LIFO) principle. It uses a fixed-size array to store elements and a top pointer to track the current position.
 
-**Key Components:**
-- **Array**: Fixed-size storage for stack elements
-- **Top**: Index pointing to the topmost element
-- **MAX**: Maximum capacity of the stack
-
-**Basic Operations:**
-1. **Push**: Add element to the top of stack
-2. **Pop**: Remove element from the top of stack
-3. **Top/Peek**: View the top element without removing
-4. **isEmpty**: Check if stack is empty
-5. **isFull**: Check if stack is full
-
-**Stack States:**
-- **Empty Stack**: top = -1
-- **Full Stack**: top = MAX - 1
-- **Normal State**: 0 ≤ top < MAX - 1
-
-**Error Conditions:**
-- **Stack Overflow**: Attempting to push when stack is full
-- **Stack Underflow**: Attempting to pop when stack is empty
-
-**Advantages:**
-- **Fast Operations**: O(1) time for push/pop
-- **Simple Implementation**: Easy to understand and code
-- **Memory Efficient**: No extra pointers needed
-- **Cache Friendly**: Array elements are contiguous in memory
-
-**Disadvantages:**
-- **Fixed Size**: Cannot grow beyond initial capacity
-- **Memory Waste**: May allocate more than needed
-- **Overflow Risk**: Must check capacity before push
-
-**Applications:**
-- Function call management
-- Expression evaluation
-- Undo operations
-- Browser history
-- Compiler syntax checking
-
 **Time Complexity:**
 - Push: O(1)
 - Pop: O(1)
 - Top: O(1)
 - Display: O(n)
-
-**Space Complexity:** O(MAX) - fixed array size
 
 #### Program :
 ```cpp
@@ -144,3 +103,9 @@ int main() {
     return 0;
 }
 ```
+
+### Output  :
+![alt text](image.png)
+![alt text](image-1.png)
+
+https://drive.google.com/drive/folders/1yedQs4N2YXnypv4yuYw6ZEtPRiD9fRJL?usp=drive_link

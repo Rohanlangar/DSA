@@ -17,24 +17,6 @@
 5. First half: from head to slow pointer
 6. Second half: from slow->next to end
 
-**Edge Cases:**
-- **Empty List**: Both halves are NULL
-- **Single Node**: First half gets the node, second half is NULL
-- **Even Length**: Both halves have equal length
-- **Odd Length**: First half has one extra node
-
-**Applications:**
-- Merge sort on linked lists
-- Finding middle element
-- Palindrome checking
-- List partitioning algorithms
-
-**Advantages:**
-- **Single Pass**: Only one traversal needed
-- **Optimal Time**: O(n) time complexity
-- **Constant Space**: O(1) space complexity
-- **No Length Calculation**: Don't need to count nodes first
-
 **Time Complexity:** O(n) - single traversal
 **Space Complexity:** O(1) - only uses two pointers
 
@@ -135,3 +117,8 @@ int main() {
     return 0;
 }
 ```
+
+### Output :
+![alt text](image.png)
+
+https://drive.google.com/file/d/1cwRBk14VL5N_iKydA--ga5S0M3853fKB/view?usp=drive_link

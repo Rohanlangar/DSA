@@ -4,12 +4,6 @@
 #### Theory :
 **Multiple Queues** implementation allows managing several independent queues simultaneously using array-based data structures. Each queue operates independently with its own front and rear pointers.
 
-**Key Features:**
-- **Independent Queues** - Each queue has separate front/rear pointers
-- **Array-based Implementation** - Fixed size queues using arrays
-- **Separate Operations** - Each queue can be manipulated independently
-- **Memory Efficient** - Uses contiguous memory allocation
-
 **Queue Structure:**
 - **Queue 1**: Independent array with front1, rear1 pointers
 - **Queue 2**: Independent array with front2, rear2 pointers
@@ -22,31 +16,11 @@
 4. **isEmpty** - Check if specific queue is empty
 5. **isFull** - Check if specific queue is full
 
-**Array-based Queue Advantages:**
-- **Fast Access** - O(1) enqueue/dequeue operations
-- **Memory Predictable** - Fixed memory allocation
-- **Cache Friendly** - Contiguous memory layout
-- **Simple Implementation** - Easy to understand and debug
-
-**Applications:**
-- **Process Scheduling** - Different priority queues
-- **Print Spooling** - Separate queues for different printers
-- **Network Routing** - Different queues for different protocols
-- **Task Management** - Separate queues for different task types
-
-**Real-world Scenarios:**
-- Hospital departments (Emergency, General, Specialist)
-- Bank services (Regular, Premium, Corporate)
-- Airport gates (Domestic, International)
-- Restaurant orders (Dine-in, Takeaway)
-
 **Time Complexity:**
 - Enqueue: O(1)
 - Dequeue: O(1)
 - Display: O(n)
 - isEmpty/isFull: O(1)
-
-**Space Complexity:** O(2×MAX) for two queues
 
 #### Program :
 ```cpp
@@ -173,3 +147,10 @@ int main() {
     return 0;
 }
 ```
+
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
+https://drive.google.com/drive/folders/1cmiKcJFRyolnaO5Au9rzQn2NVQC6Sm69?usp=drive_link

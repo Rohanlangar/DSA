@@ -1,14 +1,12 @@
 #include <iostream>
 using namespace std;
 
-// Node structure for Doubly Linked List
 typedef struct Node {
     int data;
     Node* prev;
     Node* next;
 } Node;
 
-// Function to create a new node
 Node* createNode_rrl(int val) {
     Node* node = new Node;
     node->data = val;
@@ -17,7 +15,6 @@ Node* createNode_rrl(int val) {
     return node;
 }
 
-// Function to create the list
 Node* createList_rrl() {
     Node* head = nullptr;
     Node* tail = nullptr;
@@ -43,7 +40,6 @@ Node* createList_rrl() {
     return head;
 }
 
-// Bubble sort implementation
 void bubbleSort_rrl(Node* head) {
     if (!head) return;
     bool swapped;
@@ -64,7 +60,6 @@ void bubbleSort_rrl(Node* head) {
     } while (swapped);
 }
 
-// Function to display the list
 void display_rrl(Node* head) {
     Node* temp = head;
     cout << "Head -> ";

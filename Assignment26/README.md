@@ -4,28 +4,11 @@
 #### Theory :
 **Circular Queue** is an advanced version of linear queue where the last position is connected to the first position, forming a circle. This eliminates the problem of wasted space in linear queues.
 
-**Key Features:**
-- **Circular Nature** - Rear wraps around to front when it reaches the end
-- **Space Efficiency** - Reuses empty spaces created by dequeue operations
-- **Fixed Size** - Uses array with predetermined maximum capacity
-- **No Shifting** - Elements don't need to be shifted like in linear queues
-
 **Circular Queue Operations:**
 1. **Enqueue** - Add element at rear position
 2. **Dequeue** - Remove element from front position
 3. **isFull** - Check if queue is completely filled
 4. **isEmpty** - Check if queue has no elements
-
-**Index Calculation:**
-- **Next Position**: (current + 1) % maxSize
-- **Full Condition**: (rear + 1) % maxSize == front
-- **Empty Condition**: front == -1
-
-**Advantages over Linear Queue:**
-- **Memory Utilization** - No wasted space
-- **Continuous Operation** - Can add elements even after dequeue
-- **Fixed Memory** - Predictable memory usage
-- **Efficient** - O(1) operations
 
 **Pizza Parlour Application:**
 - Orders are processed in FIFO manner
@@ -33,18 +16,10 @@
 - Continuous order processing
 - Fair service to customers
 
-**Real-world Applications:**
-- CPU scheduling in operating systems
-- Buffer management in data streams
-- Traffic light systems
-- Resource allocation systems
-
 **Time Complexity:**
 - Enqueue: O(1)
 - Dequeue: O(1)
 - Display: O(n)
-
-**Space Complexity:** O(n) where n is the maximum queue size
 
 #### Program :
 ```cpp
@@ -161,3 +136,7 @@ int main() {
     return 0;
 }
 ```
+
+
+![alt text](image.png)
+https://drive.google.com/file/d/1ShFf4Uv1x3T36aj9z642vm2qQ1im3Djq/view?usp=drive_link
