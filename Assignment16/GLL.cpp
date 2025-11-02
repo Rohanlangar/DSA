@@ -4,13 +4,12 @@
 using namespace std;
 
 typedef struct node_rrl {
-    int flag_rrl;                // 0 = atom/data, 1 = sublist
-    string data_rrl;             // valid if flag == 0
-    struct node_rrl *down_rrl;   // valid if flag == 1
-    struct node_rrl *next_rrl;   // next element at same level
+    int flag_rrl;               
+    string data_rrl;             
+    struct node_rrl *down_rrl;   
+    struct node_rrl *next_rrl;   
 } node_rrl;
 
-// Function to create a new node
 node_rrl* getNode_rrl(int flag_rrl, string data_rrl = "") {
     node_rrl* newnode_rrl = new(nothrow) node_rrl;
     if (!newnode_rrl) {
@@ -24,7 +23,6 @@ node_rrl* getNode_rrl(int flag_rrl, string data_rrl = "") {
     return newnode_rrl;
 }
 
-// Function to insert a data node (atom)
 void insertData_rrl(node_rrl* &head_rrl, string value_rrl) {
     node_rrl* newnode_rrl = getNode_rrl(0, value_rrl);
     if (!head_rrl) {
@@ -38,7 +36,6 @@ void insertData_rrl(node_rrl* &head_rrl, string value_rrl) {
     cout << "Inserted element: " << value_rrl << endl;
 }
 
-// Function to insert a sublist
 void insertSublist_rrl(node_rrl* &head_rrl) {
     cout << "Creating sublist...\n";
     node_rrl* sublist_rrl = NULL;
@@ -67,7 +64,6 @@ void insertSublist_rrl(node_rrl* &head_rrl) {
     cout << "Sublist inserted successfully!\n";
 }
 
-// Recursive function to display the GLL
 void display_rrl(node_rrl* head_rrl) {
     cout << "{ ";
     node_rrl* temp_rrl = head_rrl;
@@ -84,7 +80,6 @@ void display_rrl(node_rrl* head_rrl) {
     cout << " }";
 }
 
-// Recursive function to search an element in the GLL
 bool search_rrl(node_rrl* head_rrl, const string &target_rrl) {
     node_rrl* temp_rrl = head_rrl;
     while (temp_rrl) {
@@ -97,7 +92,6 @@ bool search_rrl(node_rrl* head_rrl, const string &target_rrl) {
     return false;
 }
 
-// Free memory
 void deleteGLL_rrl(node_rrl* &head_rrl) {
     while (head_rrl) {
         if (head_rrl->flag_rrl == 1)

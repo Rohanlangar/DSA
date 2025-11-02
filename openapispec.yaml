@@ -1,0 +1,21 @@
+swagger: '2.0'
+info:
+  title: gcfunction API
+  description: Sample API on API Gateway with a Google Cloud Run functions backend
+  version: 1.0.0
+schemes:
+- https
+produces:
+- application/json
+x-google-backend:
+  address: https://gcfunction-803999559965.us-east1.run.app
+paths:
+  /gcfunction:
+    get:
+      summary: gcfunction
+      operationId: gcfunction
+      responses:
+       '200':
+          description: A successful response
+          schema:
+            type: string

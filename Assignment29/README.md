@@ -4,23 +4,11 @@
 #### Theory :
 **Call Center Queue System** uses queue data structure to manage incoming customer calls in a fair, first-come-first-served manner. This ensures efficient call handling and customer satisfaction.
 
-**Linked List Implementation Benefits:**
-- **Unlimited Capacity** - No fixed limit on waiting calls
-- **Memory Efficient** - Allocates memory only when needed
-- **No Call Loss** - Can accommodate sudden call spikes
-- **Easy Management** - Simple add/remove operations
-
 **Call Center Operations:**
 1. **Enqueue** - Add incoming customer call to queue
 2. **Dequeue** - Assign waiting call to available agent
 3. **Display Queue** - Show all waiting calls
 4. **Count Calls** - Track number of waiting customers
-
-**Time Complexity:**
-- Add Call: O(1)
-- Assist Customer: O(1)
-- Display Queue: O(n)
-- Count Calls: O(1)
 
 
 #### Program :

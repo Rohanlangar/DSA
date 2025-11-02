@@ -129,31 +129,6 @@ void sortByData_rrl(Appointment_rrl *head_rrl) {
     cout << "List sorted by swapping data.\n";
 }
 
-Appointment_rrl* sortByPointer_rrl(Appointment_rrl *head_rrl) {
-    if (!head_rrl || !head_rrl->next_rrl) return head_rrl;
-
-    Appointment_rrl *sorted_rrl = nullptr;
-    Appointment_rrl *curr_rrl = head_rrl;
-
-    while (curr_rrl) {
-        Appointment_rrl *next_rrl = curr_rrl->next_rrl;
-
-        if (!sorted_rrl || curr_rrl->start_rrl < sorted_rrl->start_rrl) {
-            curr_rrl->next_rrl = sorted_rrl;
-            sorted_rrl = curr_rrl;
-        } else {
-            Appointment_rrl *temp_rrl = sorted_rrl;
-            while (temp_rrl->next_rrl && temp_rrl->next_rrl->start_rrl < curr_rrl->start_rrl)
-                temp_rrl = temp_rrl->next_rrl;
-
-            curr_rrl->next_rrl = temp_rrl->next_rrl;
-            temp_rrl->next_rrl = curr_rrl;
-        }
-        curr_rrl = next_rrl;
-    }
-    cout << "List sorted by pointer manipulation.\n";
-    return sorted_rrl;
-}
 
 void freeList_rrl(Appointment_rrl *head_rrl) {
     Appointment_rrl *temp_rrl;
@@ -179,7 +154,6 @@ int main() {
         cout << "2) Book an appointment\n";
         cout << "3) Cancel an appointment\n";
         cout << "4) Sort by time (swapping data)\n";
-        cout << "5) Sort by time (pointer manipulation)\n";
         cout << "0) Exit\n";
         cout << "Enter your choice: ";
         cin >> choice_rrl;
@@ -189,7 +163,6 @@ int main() {
             case 2: bookAppointment_rrl(head_rrl); break;
             case 3: cancelAppointment_rrl(head_rrl); break;
             case 4: sortByData_rrl(head_rrl); break;
-            case 5: head_rrl = sortByPointer_rrl(head_rrl); break;
             case 0: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice!\n"; break;
         }

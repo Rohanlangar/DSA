@@ -1,3 +1,24 @@
+# Assignment-missed
+### Title : Implement polynomial addition using singly linked list to represent and manipulate polynomial expressions.
+
+#### Theory :
+**Polynomial Representation using Linked Lists** is an efficient way to store and manipulate polynomial expressions where each node contains a coefficient and exponent pair. This representation is particularly useful for sparse polynomials.
+
+**Polynomial Addition Algorithm:**
+1. Compare exponents of current terms from both polynomials
+2. If exponents are equal: Add coefficients
+3. If first exponent > second: Copy first term
+4. If second exponent > first: Copy second term
+5. Move to next term and repeat
+6. Copy remaining terms from longer polynomial
+
+**Example Addition:**
+- P1(x) = 5x³ + 3x² + 2
+- P2(x) = 4x³ + x² + 3x + 1
+- Sum = 9x³ + 4x² + 3x + 3
+
+#### Program :
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -137,3 +158,8 @@ int main() {
 
     return 0;
 }
+
+```
+
+![alt text](image.png)
+https://drive.google.com/file/d/1N5fFbrGPAsjooqpJ7txMQtDF2YGfW1Ae/view?usp=drive_link

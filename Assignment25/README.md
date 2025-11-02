@@ -15,10 +15,6 @@
 - Maintains fairness in patient scheduling
 - Natural order for appointment systems
 
-**Time Complexity:**
-- Enqueue: O(1)
-- Dequeue: O(1)
-- Display: O(n)
 
 #### Program :
 ```cpp

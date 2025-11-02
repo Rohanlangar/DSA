@@ -10,16 +10,6 @@
 3. **isFull** - Check if queue is completely filled
 4. **isEmpty** - Check if queue has no elements
 
-**Pizza Parlour Application:**
-- Orders are processed in FIFO manner
-- Limited kitchen capacity (fixed queue size)
-- Continuous order processing
-- Fair service to customers
-
-**Time Complexity:**
-- Enqueue: O(1)
-- Dequeue: O(1)
-- Display: O(n)
 
 #### Program :
 ```cpp
