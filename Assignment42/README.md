@@ -1,4 +1,4 @@
-# Assignment No : 31
+# Assignment No : 42
 ### Title : Write a Program to implement Prim’s algorithm to find minimum spanning tree of a user defined graph using adjacency list.
 
 ---
@@ -97,3 +97,4 @@ int main() {
 ```
 ### Output 
 
+![alt text](image.png)
