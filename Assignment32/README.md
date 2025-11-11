@@ -1,4 +1,4 @@
-# Assignment No: 25
+# Assignment No: 32
 ### **Title:** Implement a program to perform Binary Search Tree (BST) operations — Count the total number of nodes and Compute the height of the BST.
 
 ---
